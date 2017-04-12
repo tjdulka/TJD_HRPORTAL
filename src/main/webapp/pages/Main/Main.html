@@ -1,11 +1,30 @@
-<wm-page data-ng-controller="MainPageController" name="mainpage" pagetitle="Main">
-    <wm-header content="header" name="header" height="auto"></wm-header>
-    <wm-top-nav name="topnav" content="topnav"></wm-top-nav>
-    <wm-content name="content">
-        <wm-left-panel columnwidth="2" name="leftpanel" content="leftnav"></wm-left-panel>
-        <wm-page-content columnwidth="8" paddingleft="15" paddingright="15" name="mainContent">
+<wm-page data-ng-controller="MainPageController" pagetitle="Main" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="8" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn1">
+                        <wm-livelist listclass="list-group" itemclass="list-group-item" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" datafield="All Fields" dataset="bind:Variables.HrdbEmployeeData.dataSet" navigation="Pager" name="livelist1">
+                            <wm-listtemplate layout="inline" name="listtemplate1">
+                                <wm-container class="media-left" name="container1">
+                                    <wm-picture width="32pt" height="32pt" name="Picture" shape="circle" picturesource="bind:Variables.HrdbEmployeeData.dataSet.picurl" class="media-object"></wm-picture>
+                                </wm-container>
+                                <wm-container class="media-body" name="container2">
+                                    <wm-label class="p media-heading" name="Name" caption="bind:Variables.HrdbEmployeeData.dataSet.firstname" fontunit="em" padding="unset unset unset 1.25em"></wm-label>
+                                    <wm-label class="p media-heading" caption="bind:Variables.HrdbEmployeeData.dataSet.data[$i].lastname" fontunit="em" padding="unset unset unset 1.25em" name="label3"></wm-label>
+                                    <wm-label class="p media-heading" caption="bind:Variables.HrdbEmployeeData.dataSet.data[$i].jobTitle" fontunit="em" padding="unset unset unset 1.25em" name="label4"></wm-label>
+                                </wm-container>
+                            </wm-listtemplate>
+                        </wm-livelist>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn2"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
         </wm-page-content>
-        <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
+        <wm-right-panel columnwidth="2" content="rightnav" name="right_panel1"></wm-right-panel>
     </wm-content>
-    <wm-footer name="footer" content="footer"></wm-footer>
+    <wm-footer content="footer" name="footer1"></wm-footer>
 </wm-page>
