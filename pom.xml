@@ -13,6 +13,13 @@
             </resource>
             <resource>
                 <filtering>true</filtering>
+                <directory>services/GeoCode/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
                 <directory>services/hrdb/src</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
@@ -104,6 +111,7 @@
                         <configuration>
                             <sources>
                             
+                                <source>services/GeoCode/src</source>
                                 <source>services/hrdb/src</source>
                                 <source>services/securityService/src</source>
                             </sources>

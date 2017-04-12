@@ -1,0 +1,31 @@
+{
+  "endpointAddress" : "https://maps.googleapis.com/maps/api/geocode/json",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : {
+    "address" : "94404"
+  },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "{\"results\":[{\"address_components\":[{\"long_name\":\"94404\",\"short_name\":\"94404\",\"types\":[\"postal_code\"]},{\"long_name\":\"San Mateo\",\"short_name\":\"San Mateo\",\"types\":[\"locality\",\"political\"]},{\"long_name\":\"San Mateo County\",\"short_name\":\"San Mateo County\",\"types\":[\"administrative_area_level_2\",\"political\"]},{\"long_name\":\"California\",\"short_name\":\"CA\",\"types\":[\"administrative_area_level_1\",\"political\"]},{\"long_name\":\"United States\",\"short_name\":\"US\",\"types\":[\"country\",\"political\"]}],\"formatted_address\":\"San Mateo, CA 94404, USA\",\"geometry\":{\"bounds\":{\"northeast\":{\"lat\":37.5758218,\"lng\":-122.2451559},\"southwest\":{\"lat\":37.533401,\"lng\":-122.294573}},\"location\":{\"lat\":37.5549479,\"lng\":-122.2710602},\"location_type\":\"APPROXIMATE\",\"viewport\":{\"northeast\":{\"lat\":37.5758218,\"lng\":-122.2451559},\"southwest\":{\"lat\":37.533401,\"lng\":-122.294573}}},\"place_id\":\"ChIJgaOrhjyZj4ARJLkyFXSV0wU\",\"postcode_localities\":[\"Foster City\",\"San Mateo\"],\"types\":[\"postal_code\"]}],\"status\":\"OK\"}",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "Content-Type" : [ "application/json; charset=UTF-8" ],
+      "Date" : [ "Wed, 12 Apr 2017 18:25:48 GMT" ],
+      "Expires" : [ "Thu, 13 Apr 2017 18:25:48 GMT" ],
+      "Cache-Control" : [ "public, max-age=86400" ],
+      "Vary" : [ "Accept-Language" ],
+      "Access-Control-Allow-Origin" : [ "*" ],
+      "Server" : [ "mafe" ],
+      "X-XSS-Protection" : [ "1; mode=block" ],
+      "X-Frame-Options" : [ "SAMEORIGIN" ],
+      "Alt-Svc" : [ "quic=\":443\"; ma=2592000; v=\"37,36,35\"" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null,
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "multiParamInfoList" : null
+}

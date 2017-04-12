@@ -1,0 +1,217 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "70ffed20-e995-4779-9e95-63cc287ec2b9",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "googleapis",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true
+  },
+  "host" : "maps.googleapis.com",
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/GeoCode/invoke/api/geocode/json" : {
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "operationId" : "GeoCode_RestServiceVirtualController-invoke",
+        "consumes" : [ "text/xml" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "address",
+          "in" : "query",
+          "description" : "address",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-EDITABLE" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/GeoCode/invoke/api/geocode/json",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.GeoCode.scheme}://${rest.GeoCode.host}${rest.GeoCode.basepath}/api/geocode/json"
+    }
+  },
+  "definitions" : {
+    "bounds" : {
+      "required" : [ "northeast", "southwest" ],
+      "properties" : {
+        "southwest" : {
+          "$ref" : "#/definitions/southwest"
+        },
+        "northeast" : {
+          "$ref" : "#/definitions/northeast"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GeoCode.bounds",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "viewport" : {
+      "required" : [ "northeast", "southwest" ],
+      "properties" : {
+        "southwest" : {
+          "$ref" : "#/definitions/southwest"
+        },
+        "northeast" : {
+          "$ref" : "#/definitions/northeast"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GeoCode.viewport",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "RootResponse" : {
+      "required" : [ "results", "status" ],
+      "properties" : {
+        "results" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/resultsEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "status" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GeoCode.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "location" : {
+      "required" : [ "lat", "lng" ],
+      "properties" : {
+        "lng" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "lat" : {
+          "type" : "number",
+          "format" : "double"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GeoCode.location",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "resultsEntryItem" : {
+      "required" : [ "address_components", "formatted_address", "geometry", "place_id", "postcode_localities", "types" ],
+      "properties" : {
+        "place_id" : {
+          "type" : "string"
+        },
+        "address_components" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/address_componentsEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "formatted_address" : {
+          "type" : "string"
+        },
+        "postcode_localities" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "types" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "geometry" : {
+          "$ref" : "#/definitions/geometry"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GeoCode.resultsEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "southwest" : {
+      "required" : [ "lat", "lng" ],
+      "properties" : {
+        "lng" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "lat" : {
+          "type" : "number",
+          "format" : "double"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GeoCode.southwest",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "address_componentsEntryItem" : {
+      "required" : [ "long_name", "short_name", "types" ],
+      "properties" : {
+        "long_name" : {
+          "type" : "string"
+        },
+        "short_name" : {
+          "type" : "string"
+        },
+        "types" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          },
+          "x-WM-IS_LIST" : true
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GeoCode.address_componentsEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "northeast" : {
+      "required" : [ "lat", "lng" ],
+      "properties" : {
+        "lng" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "lat" : {
+          "type" : "number",
+          "format" : "double"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GeoCode.northeast",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "geometry" : {
+      "required" : [ "bounds", "location", "location_type", "viewport" ],
+      "properties" : {
+        "bounds" : {
+          "$ref" : "#/definitions/bounds"
+        },
+        "viewport" : {
+          "$ref" : "#/definitions/viewport"
+        },
+        "location_type" : {
+          "type" : "string"
+        },
+        "location" : {
+          "$ref" : "#/definitions/location"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GeoCode.geometry",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  }
+}
