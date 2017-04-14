@@ -1,0 +1,148 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "bcf23b8c-5f87-4bd2-8572-61fc787ae5e9",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "bestbuy2",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true
+  },
+  "host" : "api.bestbuy.com",
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/bestbuy/invoke/stores((area({zipCode},150))&((storeType=big box)))" : {
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "operationId" : "bestbuy_RestServiceVirtualController-invoke",
+        "consumes" : [ "text/xml" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "show",
+          "in" : "query",
+          "description" : "show",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "format",
+          "in" : "query",
+          "description" : "format",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "apiKey",
+          "in" : "query",
+          "description" : "apiKey",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-EDITABLE" : false
+        }, {
+          "name" : "zipCode",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/bestbuy/invoke/stores((area({zipCode},150))&((storeType=big box)))",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.bestbuy.scheme}://${rest.bestbuy.host}${rest.bestbuy.basepath}/stores((area({zipCode},150))&((storeType=big box)))"
+    }
+  },
+  "definitions" : {
+    "RootResponse" : {
+      "required" : [ "canonicalUrl", "currentPage", "from", "partial", "queryTime", "stores", "to", "total", "totalPages", "totalTime", "warnings" ],
+      "properties" : {
+        "to" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "total" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "canonicalUrl" : {
+          "type" : "string"
+        },
+        "from" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "currentPage" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "queryTime" : {
+          "type" : "string"
+        },
+        "partial" : {
+          "type" : "boolean"
+        },
+        "stores" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/storesEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "warnings" : {
+          "type" : "string"
+        },
+        "totalPages" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "totalTime" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "bestbuy.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "storesEntryItem" : {
+      "required" : [ "address", "address2", "city", "fullPostalCode", "hoursAmPm", "region" ],
+      "properties" : {
+        "region" : {
+          "type" : "string"
+        },
+        "fullPostalCode" : {
+          "type" : "string"
+        },
+        "address" : {
+          "type" : "string"
+        },
+        "hoursAmPm" : {
+          "type" : "string"
+        },
+        "address2" : {
+          "type" : "string"
+        },
+        "city" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "bestbuy.storesEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  }
+}

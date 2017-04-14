@@ -1,0 +1,33 @@
+{
+  "endpointAddress" : "https://api.bestbuy.com/v1/stores((area(55417,150))&((storeType=big box)))",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : {
+    "show" : "address,address2,city,region,fullPostalCode,hoursAmPm",
+    "format" : "json",
+    "apiKey" : "s7t97gz9d2jpgkdnkbpsjsqk"
+  },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "{\"from\":1,\"to\":10,\"currentPage\":1,\"total\":25,\"totalPages\":3,\"queryTime\":\"0.038\",\"totalTime\":\"0.055\",\"partial\":false,\"canonicalUrl\":\"/v1/stores((area(\\\"55417\\\",150))&((storeType=\\\"big box\\\")))?show=address,address2,city,region,fullPostalCode,hoursAmPm&format=json&apiKey=s7t97gz9d2jpgkdnkbpsjsqk\",\"stores\":[{\"address\":\"340 W MARKET\",\"address2\":\"\",\"city\":\"BLOOMINGTON\",\"region\":\"MN\",\"fullPostalCode\":\"55425-5523\",\"hoursAmPm\":\"Sun: 11am-7pm; Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm; Sun: Close; Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm\"},{\"address\":\"1000 WEST 78TH ST\",\"address2\":\"\",\"city\":\"RICHFIELD\",\"region\":\"MN\",\"fullPostalCode\":\"55423-3912\",\"hoursAmPm\":\"Sun: 10am-8pm; Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm; Sun: Close; Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm\"},{\"address\":\"1235 TOWN CENTRE DR\",\"address2\":\"\",\"city\":\"EAGAN\",\"region\":\"MN\",\"fullPostalCode\":\"55123-1067\",\"hoursAmPm\":\"Sun: 10am-8pm; Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm; Sun: Close; Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm\"},{\"address\":\"1350 50TH STREET E\",\"address2\":\"\",\"city\":\"INVER GROVE HEIGHTS\",\"region\":\"MN\",\"fullPostalCode\":\"55077-1249\",\"hoursAmPm\":\"Sun: 10am-8pm; Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm; Sun: Close; Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm\"},{\"address\":\"1643 COUNTY ROAD B2\",\"address2\":\"\",\"city\":\"ROSEVILLE\",\"region\":\"MN\",\"fullPostalCode\":\"55113-3001\",\"hoursAmPm\":\"Sun: 10am-8pm; Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm; Sun: Close; Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm\"},{\"address\":\"11600 LEONA RD\",\"address2\":\"\",\"city\":\"EDEN PRAIRIE\",\"region\":\"MN\",\"fullPostalCode\":\"55344-3803\",\"hoursAmPm\":\"Sun: 10am-8pm; Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm; Sun: Close; Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm\"},{\"address\":\"14141 ALDRICH AVE S\",\"address2\":\"\",\"city\":\"BURNSVILLE\",\"region\":\"MN\",\"fullPostalCode\":\"55337-4444\",\"hoursAmPm\":\"Sun: 10am-8pm; Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm; Sun: Close; Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm\"},{\"address\":\"13513 RIDGEDALE DR\",\"address2\":\"\",\"city\":\"HOPKINS\",\"region\":\"MN\",\"fullPostalCode\":\"55305-1813\",\"hoursAmPm\":\"Sun: 10am-8pm; Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm; Sun: Close; Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm\"},{\"address\":\"15300 CEDAR AVE\",\"address2\":\"\",\"city\":\"APPLE VALLEY\",\"region\":\"MN\",\"fullPostalCode\":\"55124-3400\",\"hoursAmPm\":\"Sun: 10am-8pm; Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm; Sun: Close; Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm\"},{\"address\":\"8100 OLD CARRIAGE CT\",\"address2\":\"\",\"city\":\"SHAKOPEE\",\"region\":\"MN\",\"fullPostalCode\":\"55379-3160\",\"hoursAmPm\":\"Sun: 10am-8pm; Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm; Sun: Close; Mon: 10am-9pm; Tue: 10am-9pm; Wed: 10am-9pm; Thurs: 10am-9pm; Fri: 10am-9pm; Sat: 10am-9pm\"}],\"warnings\":\"Distances are in terms of miles (default)\"}",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "Access-Control-Allow-Headers" : [ "origin, x-requested-with, accept" ],
+      "Access-Control-Allow-Methods" : [ "GET" ],
+      "Access-Control-Allow-Origin" : [ "*" ],
+      "Access-Control-Max-Age" : [ "3628800" ],
+      "Content-Type" : [ "application/json; charset=UTF-8" ],
+      "Date" : [ "Fri, 14 Apr 2017 02:53:32 GMT" ],
+      "Server" : [ "Best Buy Public APIs" ],
+      "X-Cache-Hit" : [ "true" ],
+      "Content-Length" : [ "3705" ],
+      "Connection" : [ "keep-alive" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null,
+  "authType" : "NONE",
+  "contentType" : "text/xml",
+  "multiParamInfoList" : null
+}

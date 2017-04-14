@@ -1,4 +1,17 @@
 {
+  "apiKey" : {
+    "_id" : "wm-apiKey-wm.Variable-1492138272459",
+    "name" : "apiKey",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : "s7t97gz9d2jpgkdnkbpsjsqk"
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
   "HrdbEmployeeData" : {
     "_id" : "wm-HrdbEmployeeData-wm.LiveVariable-1492019921172",
     "name" : "HrdbEmployeeData",
@@ -696,6 +709,32 @@
     } ],
     "package" : "com.hrdb.Employee"
   },
+  "returnFormat" : {
+    "_id" : "wm-returnFormat-wm.Variable-1492138345036",
+    "name" : "returnFormat",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : "json"
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "showFields" : {
+    "_id" : "wm-showFields-wm.Variable-1492138308038",
+    "name" : "showFields",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : "address,address2,city,region,fullPostalCode,hoursAmPm"
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
   "svcGeoCode" : {
     "_id" : "wm-svcGeoCode-wm.ServiceVariable-1492021805764",
     "name" : "svcGeoCode",
@@ -710,6 +749,45 @@
     "service" : "GeoCode",
     "operation" : "invoke",
     "operationId" : "GeoCode_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "svcStoreLoc" : {
+    "_id" : "wm-svcStoreLoc-wm.ServiceVariable-1492137420037",
+    "name" : "svcStoreLoc",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "zipCode",
+      "value" : "bind:Widgets.livelist1.selecteditem.zip",
+      "type" : "string"
+    }, {
+      "target" : "show",
+      "value" : "bind:Variables.showFields.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "format",
+      "value" : "bind:Variables.returnFormat.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "apiKey",
+      "value" : "bind:Variables.apiKey.dataSet.dataValue",
+      "type" : "string"
+    } ],
+    "type" : "bestbuy.RootResponse",
+    "service" : "bestbuy",
+    "operation" : "invoke",
+    "operationId" : "bestbuy_RestServiceVirtualController-invoke",
     "operationType" : "get",
     "serviceType" : "RestService",
     "dataSet" : [ ],
