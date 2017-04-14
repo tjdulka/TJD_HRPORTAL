@@ -709,6 +709,19 @@
     } ],
     "package" : "com.hrdb.Employee"
   },
+  "product" : {
+    "_id" : "wm-product-wm.Variable-1492173224824",
+    "name" : "product",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
   "returnFormat" : {
     "_id" : "wm-returnFormat-wm.Variable-1492138345036",
     "name" : "returnFormat",
@@ -755,6 +768,40 @@
     "isList" : false,
     "maxResults" : 20,
     "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "svcOMSOrderByProduct" : {
+    "_id" : "wm-svcOMSOrderByProduct-wm.ServiceVariable-1492173201131",
+    "name" : "svcOMSOrderByProduct",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "wm_auth_username",
+      "value" : "watson"
+    }, {
+      "target" : "wm_auth_password",
+      "value" : "p@ssw0rd"
+    }, {
+      "target" : "product",
+      "value" : "bind:Variables.product.dataSet.dataValue",
+      "type" : "string"
+    } ],
+    "type" : "svcOMSOrdersByProduct.RootResponse",
+    "service" : "svcOMSOrdersByProduct",
+    "operation" : "invoke",
+    "operationId" : "svcOMSOrdersByProduct_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "onResult" : "svcOMSOrderByProductonResult($event, $scope)",
     "startUpdate" : false,
     "autoUpdate" : true,
     "inFlightBehavior" : "executeLast",

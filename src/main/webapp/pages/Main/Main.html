@@ -37,7 +37,7 @@
                         </wm-livelist>
                     </wm-gridcolumn>
                     <wm-gridcolumn columnwidth="3" name="gridcolumn7">
-                        <wm-prefab prefabname="watsonChatbot" name="askWatson" height="500"></wm-prefab>
+                        <wm-prefab prefabname="watsonChatbot" name="askWatson" height="500" on-watsonresponse="askWatsonWatsonresponse($scope)"></wm-prefab>
                     </wm-gridcolumn>
                 </wm-gridrow>
             </wm-layoutgrid>
